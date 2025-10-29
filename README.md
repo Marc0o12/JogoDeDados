@@ -25,6 +25,12 @@ Estes requisitos descrevem as interações que o usuário realizará no frontend
 4.  **Apresentar Resultado:** O sistema exibe o resultado da soma dos dados no frontend.
 5.  **Informar Jogador Vencedor:** A interface exibe qual jogador venceu ou se a Máquina venceu.
 
+### Requisitos Não Funcionais
+Estes requisitos descrevem as interações que o usuário realizará no frontend, que acionam os métodos correspondentes no backend POO:
+1.  **O jogo deve calcular e exibir o resultado em menos de 2 segundos.
+2.  Interface intuitiva e responsiva, acessível em desktop.
+3.  O sistema deve validar todas as entradas antes de ser feito o registro.
+
 ### Regras de Negócio
 1.  O máximo de jogadores permitido na entrada de dados é **11**. A cardinalidade da associação entre `Jogo` e `Jogador` é de **1 a 11**.
 2.  O valor escolhido para a aposta deve ser validado no backend para estar entre **2 e 12** (resultados possíveis da soma dos dados).
