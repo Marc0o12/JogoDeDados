@@ -1,9 +1,4 @@
-# JogoDeDados
-Este é um rascunho de texto README adaptado para um Projeto Web, mantendo a arquitetura de Programação Orientada a Objetos (POO) definida nas classes `Jogador`, `Dado` e `Jogo` como o núcleo da lógica de negócios.
-
-***
-
-# JOGO DE DADOS WEB (POO CORE)
+# JOGO DE DADOS
 
 ## 1. Visão Geral e Arquitetura
 
@@ -89,3 +84,10 @@ O fluxo de execução, coordenado pela classe principal no ambiente POO, seria m
 3.  **Ação do Jogo (Requisição):** O usuário solicita o lançamento dos dados. O backend chama `lancarDados()`, que cria os objetos `Dado` e utiliza `setValorFace()` para gerar os valores aleatórios.
 4.  **Processamento:** O backend executa `mostrarResultado()` (calculando a soma das faces) e `mostrarVencedor()` (comparando o resultado com `getValorAposta()` de cada jogador).
 5.  **Output (Exibição Web):** O resultado (valor da soma e o nome do vencedor ou a vitória da Máquina) é retornado ao frontend para exibição.
+
+# DIAGRAMA DE CALASSES
+  d_classes.PNG
+
+# DIAGRAMA DE CASOS DE USO
+
+ d_casos_uso.PNG
