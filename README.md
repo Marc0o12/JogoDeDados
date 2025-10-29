@@ -1,5 +1,7 @@
 # JOGO DE DADOS
 
+Link do repositório: https://github.com/Marc0o12/JogoDeDados
+
 ## 1. Visão Geral e Arquitetura
 
 Este projeto implementa o **Jogo de Dados** com uma arquitetura web, onde a lógica central do jogo é estritamente aderente aos princípios de Programação Orientada a Objetos (POO), conforme modelado nas classes `Jogo`, `Dado` e `Jogador`.
