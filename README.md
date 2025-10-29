@@ -33,61 +33,11 @@ Estes requisitos descrevem as interações que o usuário realizará no frontend
 
 ***
 
-# 3. Modelagem de Classes POO (O Core do Jogo)
-
-O projeto do Jogo de Dados é estruturado em três classes candidatas principais: `Jogador`, `Dado` e `Jogo`. Esta modelagem de classes, atributos e associações representa a arquitetura de mais alto nível do sistema.
-
-## 3.1 Classes e Atributos Definidos
-
-O modelo conceitual define as entidades e os tipos de seus atributos, detalhando os dados necessários para a execução do jogo:
-
-| Classe | Atributos (Tipo) | Propósito |
-| :--- | :--- | :--- |
-| **Jogador** | `nome: String`, `valorAposta: int` | Representa um participante do jogo. |
-| **Dado** | `valorFace: int` | Representa um dos dois dados lançados. |
-| **Jogo** | `qtdJogadores: int`, `resultado: int` | Gerencia o fluxo e armazena o estado geral da partida. |
-
-## 3.2 Relações e Comunicação entre Classes
-
-A comunicação entre as classes é essencial para que o sistema funcione. No diagrama de classes, é necessário definir **variáveis que interliguem** as classes, chamadas de **objetos**.
-
-Para que a classe **`Jogo`** possa calcular o resultado e determinar o vencedor, ela deve acessar informações definidas em outras classes:
-
-*   **Acesso ao Dado:** `Jogo` precisa saber o `valorFace` de cada `Dado`.
-*   **Acesso ao Jogador:** `Jogo` precisa saber o `valorAposta` e o `nome` de cada `Jogador`.
-
-Na implementação, a classe `Jogo` é interligada às outras classes através da declaração de objetos como atributos:
-
-| Classe Controladora | Atributos Objeto | Tipo da Classe Associada |
-| :--- | :--- | :--- |
-| **Jogo** | `dado1`, `dado2` | `Dado` |
-| **Jogo** | `jogadores` | `Jogador[]` (Vetor de Objetos) |
-
-Os objetos são as classes em execução. Por exemplo, no diagrama de objetos de uma partida, são vistas instâncias como `dado1:Dado` e `jogador:Jogador`.
-
-## 3.3 Cardinalidade (Multiplicidade) das Associações
-
-A cardinalidade define as restrições quantitativas (multiplicidade) que devem ser consideradas na implementação, indicando quantas instâncias de uma classe podem estar associadas a uma instância de outra classe.
-
-As associações e suas cardinalidades no Jogo de Dados são:
-
-| Associação | Cardinalidade | Restrição de Implementação |
-| :--- | :--- | :--- |
-| **Jogo** **lança** **Dado** | Exatamente **2** | Uma instância de `Jogo` deve associar-se a 2 instâncias de `Dado` (`dado1` e `dado2`). |
-| **Jogo** **joga** **Jogador** | De **1 a 11** (`1...11`) | O número máximo de jogadores é **11**. |
-## 4. Fluxo de Execução Web
-
-O fluxo de execução, coordenado pela classe principal no ambiente POO, seria mapeado para rotas ou *endpoints* da aplicação web:
-
-1.  **Setup (Input Web):** A Interface Web chama o método `inserirJogadores()` para inicializar o array de objetos `Jogador`.
-2.  **Apostas (Input Web):** A Interface Web coleta as apostas e chama `inserirApostas()`, utilizando `setValorAposta()` para atribuir o valor a cada objeto `Jogador`.
-3.  **Ação do Jogo (Requisição):** O usuário solicita o lançamento dos dados. O backend chama `lancarDados()`, que cria os objetos `Dado` e utiliza `setValorFace()` para gerar os valores aleatórios.
-4.  **Processamento:** O backend executa `mostrarResultado()` (calculando a soma das faces) e `mostrarVencedor()` (comparando o resultado com `getValorAposta()` de cada jogador).
-5.  **Output (Exibição Web):** O resultado (valor da soma e o nome do vencedor ou a vitória da Máquina) é retornado ao frontend para exibição.
-
 # DIAGRAMA DE CALASSES
-  d_classes.PNG
+<img width="655" height="273" alt="Image" src="https://github.com/user-attachments/assets/b3a501ea-47d3-42ef-a781-6cef04d5b0c6" />
+
 
 # DIAGRAMA DE CASOS DE USO
 
- d_casos_uso.PNG
+
+<img width="833" height="475" alt="Image" src="https://github.com/user-attachments/assets/12b5861e-e647-41ad-9504-b0a557a366e2" />
